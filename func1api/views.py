@@ -41,8 +41,10 @@ def callback(request):
                     elif mtext == '@傳送位置':
                         func.sendPosition(event)
     
-                    if mtext == '@快速選單':
+                    elif mtext == '@快速選單':
                         func.sendQuickreply(event)
+                    else :            
+                        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
     
         return HttpResponse()
 
