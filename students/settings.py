@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'studentsapp',
     'test2api', # 新增的 app
+    'func1api',
+
 ]
 
 MIDDLEWARE = [
