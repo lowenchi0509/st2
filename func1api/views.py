@@ -69,7 +69,7 @@ def callback(request):
                 elif backdata.get('action') == 'sell':
                     func.sendBack_sell(event, backdata)
         """             
-                    else :            
+                    else:            
                         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
     
         return HttpResponse()
