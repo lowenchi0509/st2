@@ -61,14 +61,7 @@ def callback(request):
     
                     elif mtext == '@yes':
                         func.sendYes(event)
-        """ 
-        if isinstance(event, PostbackEvent):  #PostbackTemplateAction觸發此事件
-                backdata = dict(parse_qsl(event.postback.data))  #取得Postback資料
-                if backdata.get('action') == 'buy':
-                    func.sendBack_buy(event, backdata)
-                elif backdata.get('action') == 'sell':
-                    func.sendBack_sell(event, backdata)
-        """             
+      
                     else:            
                         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
     
