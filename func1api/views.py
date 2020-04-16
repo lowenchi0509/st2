@@ -71,8 +71,8 @@ def callback(request):
                 if backdata.get('action') == 'sell':
                     func.sendData_sell(event, backdata)
 
-                    else:            
-                        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
+            else:            
+                line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
     
         return HttpResponse()
 
