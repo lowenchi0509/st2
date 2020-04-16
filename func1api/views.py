@@ -61,7 +61,16 @@ def callback(request):
     
                     elif mtext == '@yes':
                         func.sendYes(event)
-      
+                    elif mtext == '@圖片地圖':
+                        func.sendImgmap(event)
+                    elif mtext == '@日期時間':
+                        func.sendDatetime(event)
+    
+            if isinstance(event, PostbackEvent):  #PostbackTemplateAction觸發此事件
+                backdata = dict(parse_qsl(event.postback.data))  #取得data資料
+                if backdata.get('action') == 'sell':
+                    func.sendData_sell(event, backdata)
+
                     else:            
                         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=event.message.text))
     
