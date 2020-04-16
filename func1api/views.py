@@ -31,7 +31,11 @@ def callback(request):
     
                     elif mtext == '@傳送圖片':
                         func.sendImage(event)
+                    elif mtext == '@傳送聲音':
+                        func.sendVoice(event)
     
+                    elif mtext == '@傳送影片':
+                        func.sendVedio(event)
                     elif mtext == '@傳送貼圖':
                         func.sendStick(event)
     
