@@ -349,7 +349,7 @@ def sendData_sell(event, backdata):  #Postback,顯示日期時間
         line_bot_api.reply_message(event.reply_token,message)
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
-"""      
+     
 def sendVoice(event):  #傳送聲音
     try:
         message = AudioSendMessage(
@@ -359,7 +359,7 @@ def sendVoice(event):  #傳送聲音
         line_bot_api.reply_message(event.reply_token, message)
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
-
+""" 
 def sendVedio(event):  #傳送影像
     try:
         message = VideoSendMessage(
