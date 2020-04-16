@@ -359,7 +359,7 @@ def sendVoice(event):  #傳送聲音
         line_bot_api.reply_message(event.reply_token, message)
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
-""" 
+
 def sendVedio(event):  #傳送影像
     try:
         message = VideoSendMessage(
@@ -369,4 +369,4 @@ def sendVedio(event):  #傳送影像
         line_bot_api.reply_message(event.reply_token, message)
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
-"""
+
