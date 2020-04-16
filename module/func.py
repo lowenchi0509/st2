@@ -7,7 +7,7 @@ from linebot.models import ImagemapSendMessage, BaseSize, MessageImagemapAction,
 from linebot.models import TextSendMessage, AudioSendMessage, VideoSendMessage
 import datetime
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
-baseurl = "./media/"
+baseurl = "https://daphne-robot-2020.herokuapp.com/media/"
 def sendText(event):  #傳送文字
     try:
         message = TextSendMessage(  
